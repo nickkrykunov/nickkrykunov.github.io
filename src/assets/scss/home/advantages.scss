@@ -1,0 +1,108 @@
+.home-advantages{
+    .section-title{
+        width: 100%;
+        padding: 0 30%;
+        text-align: center;
+        margin-bottom: 70px;
+
+        .pink{
+            color: rgb(244,116,188);
+        }
+    }
+
+    .home-advantages__list{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0 60px;
+
+        .home-advantages__item{
+            width: 100%;
+            display: flex;
+
+            .container{
+                width: fit-content;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .preview{
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin-bottom: 50px;
+                background-color: rgba(139,217,217,1);
+
+                .icon{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    height: 75px;
+                    width: 75px;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        background-position: center;
+                        background-size: 85% 85%;
+                        background-image: inherit;
+                        background-repeat: no-repeat;
+                    }
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 100px;
+                        width: 100px;
+                        left: -12.5px;
+                        top: -12.5px;
+                        z-index: -1;
+                    }
+
+                    &.foot{
+                        &::after{
+                            background-color: rgba(255,212,196, 1);
+                            transform-origin: center center;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    &.ball-of-yarn{
+                        &::after{
+                            background-color: rgba(226,81,93,1);
+                            height: 125px;
+                            width: 125px;
+                            left: -25px;
+                            top: -25px;
+                            border-top-left-radius: 50%;
+                            border-top-right-radius: 50%;
+                            border-bottom-right-radius: 50%;
+                        }
+                    }
+
+                    &.house-love{
+                        &::after{
+                            background-color: rgba(253,193,86, 1);
+                        }
+                    }
+                }
+            }
+
+            .title, .text{
+                max-width: 250px;
+                font-size: 18px;
+                text-align: center;
+            }
+            
+            .title{
+                font-weight: bolder;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
