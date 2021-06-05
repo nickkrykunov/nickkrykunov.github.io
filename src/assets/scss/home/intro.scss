@@ -1,0 +1,101 @@
+.home-intro{
+    height: 100vh;
+    display: flex;
+    padding: 0;
+
+
+    .home-intro__block{
+        &:first-child{
+            width: 60%;
+            padding: 0 200px 0 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:last-child{
+            width: 40%;
+            background-color: rgb(28, 0, 129);
+            position: relative;
+        }
+
+        .home-intro__introduction{
+            h1{
+                margin-bottom: 40px;
+            }
+        }
+
+        #qp9wd819h2gio12hb9d102d8g{
+            position: absolute;
+            height: 250px;
+            width: 125px;
+            border-bottom-right-radius: 125px;
+            border-top-right-radius: 125px;
+            background-color: rgb(139, 217, 217);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .inner{
+                height: 45px;
+                width: 45px;
+                background-color: azure;
+
+                transform: rotate(45deg);
+            }
+        }
+
+        #wuqfg8712gf0891hd81hpq8h{
+            top: 30%;
+            left: 0;
+            position: absolute;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            transform: translateX(-40%);
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        #opifdbiogwr189p2gre8912pger{
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            border-radius: 50%;
+            border-bottom-left-radius: 0;
+            height: 250px;
+            width: 250px;
+            overflow: hidden;
+            transform: translateX(-50%);
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        #iuwbfpgh289fg18hdpf8o21he8d12h{
+            bottom: 150px;
+            right: 0;
+            position: absolute;
+            height: 330px;
+            width: 330px;
+            overflow: hidden;
+            border-top-right-radius: 150px;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+}
