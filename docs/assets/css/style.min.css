@@ -489,12 +489,18 @@ header {
     align-items: center; }
     header .header__menu ul li:not(:last-child) {
       margin-right: 40px; }
+    header .header__menu ul li a {
+      color: black; }
 
 .home-intro {
   height: 100vh;
   display: flex;
   padding: 0;
   overflow-y: hidden; }
+  @media (max-width: 640px) {
+    .home-intro {
+      flex-direction: column;
+      height: fit-content; } }
   .home-intro .home-intro__block:first-child {
     width: 60%;
     padding: 0 200px 0 70px;
@@ -506,6 +512,15 @@ header {
     width: 40%;
     background-color: #1c0081;
     position: relative; }
+  @media (max-width: 640px) {
+    .home-intro .home-intro__block {
+      width: 100% !important;
+      padding: 0 !important; }
+      .home-intro .home-intro__block:first-child {
+        height: 60vh;
+        padding: 0 20px !important; }
+      .home-intro .home-intro__block:last-child {
+        height: 60vh; } }
   .home-intro .home-intro__block .home-intro__introduction h1 {
     margin-bottom: 40px; }
   .home-intro .home-intro__block #qp9wd819h2gio12hb9d102d8g {
@@ -695,6 +710,9 @@ header {
   display: flex;
   flex-wrap: nowrap;
   padding: 0 60px; }
+  @media (max-width: 640px) {
+    .home-advantages .home-advantages__list {
+      flex-wrap: wrap; } }
   .home-advantages .home-advantages__list .home-advantages__item {
     width: 100%;
     display: flex; }

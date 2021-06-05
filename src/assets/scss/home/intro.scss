@@ -4,8 +4,12 @@
     padding: 0;
     overflow-y: hidden;
 
-    .home-intro__block{
+    @include breakpoint($mobile-bp) {
+        flex-direction: column;
+        height: fit-content;
+    }
 
+    .home-intro__block{
         &:first-child{
             width: 60%;
             padding: 0 200px 0 70px;
@@ -19,6 +23,20 @@
             width: 40%;
             background-color: rgb(28, 0, 129);
             position: relative;
+        }
+
+        @include breakpoint($mobile-bp) {
+            width: 100% !important;
+            padding: 0 !important;
+
+            &:first-child{
+                height: 60vh;
+                padding: 0 20px !important;
+            }
+
+            &:last-child{
+                height: 60vh;
+            }
         }
 
         .home-intro__introduction{
