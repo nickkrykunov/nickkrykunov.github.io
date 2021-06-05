@@ -2,9 +2,10 @@
     height: 100vh;
     display: flex;
     padding: 0;
-
+    overflow-y: hidden;
 
     .home-intro__block{
+
         &:first-child{
             width: 60%;
             padding: 0 200px 0 70px;
@@ -82,7 +83,7 @@
         }
 
         #iuwbfpgh289fg18hdpf8o21he8d12h{
-            bottom: 150px;
+            bottom: 100px;
             right: 0;
             position: absolute;
             height: 330px;
@@ -96,6 +97,159 @@
                 object-fit: cover;
             }
         }
-    }
 
+        #qihwofuqwgbfq8hfr089hwqhf{
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            left: 150px;
+            bottom: calc(100px + 330px);
+            z-index: 2;
+
+            .inner{
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                background-color: rgba(226,81,93,1);
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            .right{
+                position: absolute;
+                top: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 200px 200px 0;
+                border-color: transparent rgba(255,212,196, 1) transparent transparent;
+            }
+
+            .left{
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 200px 0 0 200px;
+                border-color: transparent transparent transparent rgba(253,193,86, 1);
+            }
+        }
+
+        #aoqohwif8092h1hr1oi2hr12h{
+            position: absolute;
+            bottom: -15%;
+            right: 330px;
+
+            .top{
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 200px 200px;
+                border-color: transparent transparent rgba(139,217,217,1) transparent;
+            }
+
+            .bottom{
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 200px 200px 0 0;
+                border-color: rgba(255,212,196, 1) transparent transparent transparent;
+            }
+        }
+
+        #wqbfduoiwqbfq89wh1280992fd{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            bottom: 250px;
+            left: 75px;
+            transform: rotate(-45deg);
+
+            .left{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 100px 100px 0 0;
+                border-color: rgba(255,212,196, 1) transparent transparent transparent;
+            }
+
+            .right{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 100px 100px;
+                border-color: transparent transparent rgba(28,82,138,1) transparent;
+            }
+
+            .inner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                height: 50%;
+                width: 50%;
+                background-color: rgba(139,217,217,1);
+            }
+        }
+
+        #whqid901h290r0921h09rh1920rn{
+            position: absolute;
+            right: 0;
+            top: 100px;
+            height: 250px;
+            width: 250px;
+            z-index: 2;
+
+            .left{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 250px;
+                width: 125px;
+                background-color: rgba(28,82,138,1);
+                border-top-left-radius: 125px;
+                border-bottom-left-radius: 125px;
+            }
+
+            .right{
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                .top{
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 125px 125px 0 0;
+                    border-color: rgba(253,193,86, 1) transparent transparent transparent;
+                }
+
+                .bottom{
+                    position: absolute;
+                    top: 100%;
+                    height: 125px;
+                    width: 125px;
+                    background-color: rgba(139,217,217,1);
+
+                    .inner{
+                        position: absolute;
+                        top: 25%;
+                        left: 25%;
+                        transform: rotate(45deg);         
+                        transform-origin: center center;               
+                        height: 50%;
+                        width: 50%;
+                        background-color: rgba(226,81,93,1);
+                    }
+                }
+            }
+        }
+    }
 }
