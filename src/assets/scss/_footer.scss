@@ -1,4 +1,5 @@
 footer{
+    margin-top: auto;
     border-top: 1px solid rgb(212, 212, 212);
 
     .footer__content{
@@ -16,6 +17,11 @@ footer{
         }
 
         .footer__contacts{
+            display: flex;
+
+            @include breakpoint($mobile-bp){
+                display: block;
+            }
             
             a{
                 display: block;

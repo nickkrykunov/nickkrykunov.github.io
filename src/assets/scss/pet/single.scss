@@ -1,0 +1,255 @@
+
+section.pet{
+    display: flex;
+    padding-top: 120px;
+}
+
+.pet-info{
+    width: 50%;
+    margin-right: 10%;
+
+    .pet-info__header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .details{
+            display: flex;
+        }
+
+        .pet-info__name{
+            font-weight: bolder;
+        }
+
+        .pet-info__price{
+            position: relative;
+            height: 30px;
+            line-height: 18px;
+            padding: 7px 5px 5px 25px;
+            border-radius: 3px;
+            border: 1px solid #7057cc;
+            color: #7057cc;
+            margin-right: 15px;
+
+            &::after{
+                content: '';
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                left: 5px;
+                top: 6px;
+                background-image: url(/assets/images/svg/dollar.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+        .pet-info__rescue-button{
+            height: 30px;
+            line-height: 18px;
+            border: 1px solid #7057cc;
+            background: #7057cc;
+            border-radius: 3px;
+            padding: 5px 10px;
+            color: #fff;
+        }
+    }
+
+    .pet-info__breed{
+        font-weight: bolder;
+        color: rgb(28, 0, 129);
+        margin-bottom: 40px;
+    }
+
+    .pet-info__characteristics{
+        margin-bottom: 30px;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+
+            li{
+                margin-right: 20px;
+            }
+
+            .pet-info__characteristic-title{
+                font-weight: bolder;
+                margin-bottom: 10px;
+            }
+
+            .pet-info__characteristic-value{
+
+            }
+        }
+    }
+
+    .pet-info__shelter{
+        display: flex;
+        padding: 25px 0;
+        border-top: 1px solid rgb(212, 212, 212);
+        border-bottom: 1px solid rgb(212, 212, 212);
+        align-items: center;
+        margin-bottom: 30px;
+
+        .pet-info__shelter-icon{
+            margin-right: 15px;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: #7057cc;
+            background-image: url(/assets/images/svg/house-love.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 60%;
+        }
+
+        .pet-info__shelter-info{
+            .title{
+                font-size: larger;
+                margin-bottom: 10px;
+            }
+        }
+
+        .pet-info__shelter-verified{
+            margin-left: auto;
+            color: #fff;
+            background-color: rgba(39,174,96,1);
+            padding: 10px 15px;
+            border-radius: 3px;
+        }
+    }
+
+    .pet-info__story{
+        padding: 0 30px;
+
+        .title{
+            font-size: larger;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.pet-image{
+    width: 40%;
+
+    .pet-image__container{
+        position: sticky;
+        top: 70px;
+
+        .pet-image__photo{
+            width: 100%;
+            height: 350px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 0px 9px -2px rgba(77,77,77,1);
+            -moz-box-shadow: 0px 0px 9px -2px rgba(77,77,77,1);
+            box-shadow: 0px 0px 9px -2px rgba(77,77,77,1);  
+        }
+
+        .pet-request-form{
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+
+            -webkit-box-shadow: 0px 0px 9px -2px rgba(77,77,77,1);
+            -moz-box-shadow: 0px 0px 9px -2px rgba(77,77,77,1);
+            box-shadow: 0px 0px 9px -2px rgba(77,77,77,1); 
+
+
+            .pet-request-form__header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .pet-name{
+                    font-size: 22px;
+                    font-weight: bolder;
+                }
+
+                .pet-price{
+                    position: relative;
+                    height: 30px;
+                    line-height: 18px;
+                    padding: 7px 5px 5px 25px;
+                    border-radius: 3px;
+                    border: 1px solid #7057cc;
+                    color: #7057cc;
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        height: 16px;
+                        width: 16px;
+                        left: 5px;
+                        top: 6px;
+                        background-image: url(/assets/images/svg/dollar.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            .pet-request-form__breed{
+                font-size: smaller;
+                color: rgb(28, 0, 129);
+                margin-bottom: 10px;
+            }
+
+            .pet-request-form__characteristics{
+                margin-bottom: 20px;
+
+                ul{
+                    display: flex;
+                    padding: 10px 0;
+                    border-top: 1px solid rgb(212, 212, 212);
+                    border-bottom: 1px solid rgb(212, 212, 212);
+
+                    li{
+                        position: relative;
+                        padding: 5px 20px;
+
+                        &:first-child{
+                            padding-left: 0;
+                        }
+
+                        &:not(:last-child){
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateX(50%) translateY(-50%);
+                                background-color: rgb(28, 0, 129);
+                                height: 6px;
+                                width: 6px;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pet-request-form-button{
+                width: 100%;
+                padding: 20px;
+                background: transparent;
+                border: 1px solid rgb(28, 0, 129);
+                color: rgb(28, 0, 129);
+                font-size: larger;
+                transition: .3s color, .3s border, .3s background;
+
+                &:hover{
+                    background: rgb(28, 0, 129);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

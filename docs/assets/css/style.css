@@ -924,12 +924,20 @@ footer .footer__content {
     justify-content: space-between;
 }
 
+@media (max-width: 640px) {
+    footer .footer__content {
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+}
+
 footer .footer__content .footer__copyright {
     opacity: .7;
     font-size: 20px;
 }
 
 footer .footer__content .footer__contacts a {
+    display: block;
     text-decoration: none;
     color: #000;
     position: relative;
@@ -937,6 +945,12 @@ footer .footer__content .footer__contacts a {
     font-size: 18px;
     line-height: 26px;
     padding-left: 24px;
+}
+
+@media (max-width: 640px) {
+    footer .footer__content .footer__contacts a {
+        margin-bottom: 20px;
+    }
 }
 
 footer .footer__content .footer__contacts a::before {

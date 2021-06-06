@@ -9,6 +9,12 @@ header{
     z-index: 10;
     background-color: rgb(238, 238, 238);
 
+    a{
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
     @include breakpoint($table-bp) {
         padding: 5px 15px;
         

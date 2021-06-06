@@ -15,6 +15,12 @@ body {
     }
 }
 
+.page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .d-flex{
     display: flex;
 }
@@ -135,6 +141,6 @@ h6{
 @import "footer";
 
 @import "home/_1_";
-
+@import "pet/_1_";
 
 @import "vendors/tiny-slider";
