@@ -1356,7 +1356,7 @@ section.pet {
   bottom: 0;
   background-color: #eeeeee;
   padding: 10px 0 0 0;
-  border-top: 1px solid #1c0081; }
+  border-top: 1px solid #7057cc; }
   @media (max-width: 640px) {
     .pet-request-form {
       display: block; } }
@@ -1391,13 +1391,13 @@ section.pet {
   .pet-request-form .pet-request-form-button {
     width: 100%;
     padding: 10px 20px;
-    border-top: 1px solid #1c0081;
-    background: #1c0081;
+    border-top: 1px solid #7057cc;
+    background: #7057cc;
     color: #fff;
     font-size: larger;
     transition: .3s color, .3s border, .3s background; }
     .pet-request-form .pet-request-form-button:hover {
-      color: #1c0081;
+      color: #7057cc;
       background: transparent; }
 
 .tns-outer {

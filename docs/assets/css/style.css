@@ -1579,9 +1579,27 @@ section.pet {
     padding-top: 120px;
 }
 
+@media (max-width: 640px) {
+    section.pet {
+        padding-top: 50px;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .pet-info {
     width: 50%;
     margin-right: 10%;
+}
+
+@media (max-width: 640px) {
+    .pet-info {
+        width: 100%;
+        margin-right: 0;
+        padding: 0 20px;
+    }
 }
 
 .pet-info .pet-info__header {
@@ -1684,6 +1702,12 @@ section.pet {
     background-size: 60%;
 }
 
+@media (max-width: 640px) {
+    .pet-info .pet-info__shelter .pet-info__shelter-icon {
+        display: none;
+    }
+}
+
 .pet-info .pet-info__shelter .pet-info__shelter-info .title {
     font-size: larger;
     margin-bottom: 10px;
@@ -1701,6 +1725,13 @@ section.pet {
     padding: 0 30px;
 }
 
+@media (max-width: 640px) {
+    .pet-info .pet-info__story {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+}
+
 .pet-info .pet-info__story .title {
     font-size: larger;
     font-weight: bolder;
@@ -1709,6 +1740,13 @@ section.pet {
 
 .pet-image {
     width: 40%;
+}
+
+@media (max-width: 640px) {
+    .pet-image {
+        width: 100%;
+        margin-bottom: 40px;
+    }
 }
 
 .pet-image .pet-image__container {
@@ -1727,11 +1765,25 @@ section.pet {
     box-shadow: 0px 0px 9px -2px #4d4d4d;
 }
 
+@media (max-width: 640px) {
+    .pet-image .pet-image__container .pet-image__photo {
+        box-shadow: none;
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+}
+
 .pet-image .pet-image__container .pet-request-form {
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0px 0px 9px -2px #4d4d4d;
+}
+
+@media (max-width: 640px) {
+    .pet-image .pet-image__container .pet-request-form {
+        display: none;
+    }
 }
 
 .pet-image .pet-image__container .pet-request-form .pet-request-form__header {
@@ -1825,6 +1877,76 @@ section.pet {
 .pet-image .pet-image__container .pet-request-form .pet-request-form-button:hover {
     background: #1c0081;
     color: #fff;
+}
+
+.pet-request-form {
+    width: 100%;
+    position: sticky;
+    display: none;
+    bottom: 0;
+    background-color: #eeeeee;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #1c0081;
+}
+
+@media (max-width: 640px) {
+    .pet-request-form {
+        display: block;
+    }
+}
+
+.pet-request-form .pet-request-form__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 15px;
+}
+
+.pet-request-form .pet-request-form__header .pet-name {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.pet-request-form .pet-request-form__header .pet-price {
+    position: relative;
+    height: 30px;
+    line-height: 18px;
+    padding: 7px 5px 5px 25px;
+    border-radius: 3px;
+    border: 1px solid #7057cc;
+    color: #7057cc;
+}
+
+.pet-request-form .pet-request-form__header .pet-price::after {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 5px;
+    top: 6px;
+    background-image: url(/assets/images/svg/dollar.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pet-request-form .pet-request-form-button {
+    width: 100%;
+    padding: 10px 20px;
+    border-top: 1px solid #1c0081;
+    background: #1c0081;
+    color: #fff;
+    font-size: larger;
+    transition: .3s color, .3s border, .3s background;
+}
+
+.pet-request-form .pet-request-form-button:hover {
+    color: #1c0081;
+    background: transparent;
 }
 
 .tns-outer {

@@ -299,7 +299,7 @@ section.pet{
     bottom: 0;
     background-color: rgb(238, 238, 238);
     padding: 10px 0 0 0;
-    border-top: 1px solid rgb(28, 0, 129);
+    border-top: 1px solid #7057cc;
 
     @include breakpoint($mobile-bp){
         display: block;
@@ -344,16 +344,14 @@ section.pet{
     .pet-request-form-button{
         width: 100%;
         padding: 10px 20px;
-        border-top: 1px solid rgb(28, 0, 129);
-        background: rgb(28, 0, 129);
+        border-top: 1px solid #7057cc;
+        background: #7057cc;
         color: #fff;
         font-size: larger;
         transition: .3s color, .3s border, .3s background;
 
         &:hover{
-            
-
-            color: rgb(28, 0, 129);
+            color: #7057cc;
             background: transparent;
         }
     }
