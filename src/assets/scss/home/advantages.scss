@@ -7,6 +7,7 @@
 
         @include breakpoint($mobile-bp) {
             padding: 30px;
+            margin-bottom: 30px;
         }
 
         .pink{

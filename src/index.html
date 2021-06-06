@@ -7,7 +7,7 @@ title: Pet Rescue
 {{> home__intro }}
 {{> home__categories }}
 
-<section>
+<section data-hash="#find-pet">
     <div class="adoptions_list slider">
         <div class="slider__next"></div>
         <div class="slider__prev"></div>
@@ -28,16 +28,16 @@ title: Pet Rescue
     </div>
 </section>
 
-<section>
+<section data-hash="#ask-us">
     <div class="contact-us-form">
         <h2 class="title">Contact request</h2>
         <form action="">
             <div class="form-data">
-                <input type="text" class="name" placeholder="Your name">
+                <input type="text" class="name" placeholder="Your name" name="name">
                 <small class="error">Please, enter your name</small>
             </div>
             <div class="form-data">
-                <input type="text" class="email" placeholder="Your email">
+                <input type="text" class="email" placeholder="Your email" name="email">
                 <small class="error">Please, enter your email in format example@mail.com</small>
             </div>
             <button type="submit">Ask</button>

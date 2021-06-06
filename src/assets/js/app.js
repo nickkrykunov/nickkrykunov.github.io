@@ -3,6 +3,7 @@ import { tns } from 'tiny-slider/src/tiny-slider';
 const body = document.querySelector('body');
 const header_burger = document.querySelector('.header__burger');
 const header_menu = document.querySelector('.header__menu');
+const header_menu_links = document.querySelectorAll('.header-link');
 const pets_sliders = document.querySelectorAll('.adoptions_list');
 
 function validateEmail(email) {
@@ -10,11 +11,33 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+function scroll_to_section(hash) {
+    const section = document.querySelector(`section[data-hash="${hash}"]`);
+    const top_distance = section.offsetTop;
+    setTimeout(function () {
+        window.scrollTo({
+            top: top_distance - 40,
+            behavior: "smooth"
+        });
+    },2);
+}
+
 header_burger.addEventListener('click', function(event){
     header_burger.classList.toggle('active');
     header_menu.classList.toggle('active');
     body.classList.toggle('no-scroll');
 });
+
+header_menu_links.forEach(link => {
+    link.addEventListener('click', event => {
+        const link_str = event.currentTarget.getAttribute('href');
+        const hash = link_str.substring(link_str.indexOf('#'),link_str.length);
+        header_burger.classList.toggle('active');
+        header_menu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        scroll_to_section(hash);
+    })
+})
 
 pets_sliders.forEach(item => {
     const container = item.querySelector('.slider__container');
@@ -42,4 +65,6 @@ pets_sliders.forEach(item => {
     });
 });
 
-
+if(window.location.hash) {
+    scroll_to_section(window.location.hash);
+}

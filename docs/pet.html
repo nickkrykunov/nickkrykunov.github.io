@@ -36,16 +36,10 @@
             <div class="header__menu">
                 <ul>
                     <li>
-                        <a href="/">Find a pet</a>
+                        <a class="header-link" href="/#find-pet">Find a pet</a>
                     </li>
                     <li>
-                        <a href="/">Breeds</a>
-                    </li>
-                    <li>
-                        <a href="/">Health&Care Articles</a>
-                    </li>
-                    <li>
-                        <a href="/">About us</a>
+                        <a class="header-link" href="/#ask-us">Ask us</a>
                     </li>
                 </ul>
             </div>
@@ -234,7 +228,7 @@
                 
             </section>
         </main>
-    
+        
         <footer>
             <div class="footer__content">
                 <div class="footer__copyright">
@@ -245,7 +239,20 @@
                     <a href="tel:+38001929419" class="phone">+38001929419</a>
                 </div>
             </div>
-        </footer>    </div>
+        </footer>        <div class="modal" id="pet-request-modal">
+            <div class="modal-container">
+                <form action="">
+                    <div class="title">
+                        Please, enter your contact data for shelter.
+                    </div>
+                    <div class="form-data">
+                        <input type="text" class="email" name="email" placeholder="Enter email">
+                        <small class="error">Please, enter your email in format example@mail.com</small>
+                    </div>
+                    <button type="submit">Send request</button>
+                </form>
+            </div>
+        </div>    </div>
 
     <script type="text/javascript" src="assets/js/app.js"></script>
 </body>

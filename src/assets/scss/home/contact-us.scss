@@ -4,6 +4,11 @@
     .title{
         font-weight: bolder;
         margin-bottom: 30px;
+
+        @include breakpoint($mobile-bp) {
+            margin-bottom: 10px;
+            text-align: center;
+        }
     }
 
     form{
@@ -11,6 +16,10 @@
         align-items: flex-start;
         width: 100%;
         padding: 20px 10px;
+
+        @include breakpoint($mobile-bp) {
+            flex-direction: column;
+        }
 
         .error{
             display: none;
@@ -21,6 +30,11 @@
             width: 300px;
             padding: 10px 20px;
             margin-right: 20px;
+
+            @include breakpoint($mobile-bp) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
 
         small{
@@ -34,6 +48,10 @@
             color: #fff;
             transition: .3s color, .3s background-color;
 
+            @include breakpoint($mobile-bp) {
+                width: 100%;
+            }
+
             &:hover{
                 background-color: transparent;
                 color: #7057cc;
@@ -44,6 +62,10 @@
             display: flex;
             flex-direction: column;
             width: fit-content;
+
+            @include breakpoint($mobile-bp) {
+                width: 100%;
+            }
 
             &.error{
                 .error{
