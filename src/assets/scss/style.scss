@@ -9,6 +9,10 @@ body {
     color: $black;
     overflow-y: auto;
     background-color: rgb(226, 226, 226);
+
+    &.no-scroll{
+        overflow-y: hidden;
+    }
 }
 
 .d-flex{
@@ -127,7 +131,6 @@ h6{
 
 
 @import "header";
-
 
 
 @import "home/_1_";

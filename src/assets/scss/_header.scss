@@ -7,6 +7,13 @@ header{
     left: 0;
     width: 100%;
     z-index: 10;
+
+    @include breakpoint($table-bp) {
+        padding: 5px 15px;
+        background-color: rgb(226, 226, 226);
+        justify-content: space-between;
+        z-index: 20;
+    }
     
     .header__logo{
         height: 50px;
@@ -15,21 +22,117 @@ header{
         background-position: center;
         background-size: cover;
         margin-right: 40px;
+
+        @include breakpoint($table-bp) {
+            z-index: 25;
+        }
     }
 
     .header__menu{
+
+        @include breakpoint($table-bp) {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: -100vh;
+            left: 0;
+            transition: .8s top;
+            z-index: 19;
+            background-color: rgb(226, 226, 226);
+
+            &.active{
+                top: 0;
+            }
+        }
+
         ul{
             height: 50px;
             display: flex;
             align-items: center;
 
+            @include breakpoint($table-bp) {
+                flex-direction: column;
+                height: 100%;
+                padding-top: 100px;
+            }
+
             li{
+                @include breakpoint($table-bp) {
+                    margin-right: 0 !important;
+                    margin-bottom: 40px;
+                    align-items: flex-start;
+                }
+
                 &:not(:last-child){
                     margin-right: 40px;
                 }
 
                 a{
                     color: black;
+
+                    @include breakpoint($table-bp) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__burger{
+        display: none;
+        height: 50px;
+        width: 50px;
+
+        @include breakpoint($table-bp) {
+            display: block;
+            position: relative;
+            z-index: 25;
+        }
+
+        span{
+            position: absolute;
+            width: 35px;
+            height: 3px;
+            border-radius: 3px;
+            top: calc(50% - 1.5px);
+            left: 7.5px;
+            background-color: rgb(28, 0, 129);
+            transition: .8s background-color;
+
+            &::after,
+            &::before{
+                content: '';
+                position: absolute;
+                display: block;
+                width: 35px;
+                left: 0;
+                height: 3px;
+                border-radius: 3px;
+                background-color: rgb(28, 0, 129);
+                transition: .8s top, .8s transform;
+            }
+
+            &::after{
+                top: -10px;
+            }
+
+            &::before{
+                top: 10px;
+            }
+        }
+
+        &.active{
+            span{
+                background-color: transparent;
+
+                &::after{
+                    top: 0;
+                    transform: rotate(135deg);
+                }
+
+                &::before{
+                    top: 0;
+                    transform: rotate(-135deg);
                 }
             }
         }

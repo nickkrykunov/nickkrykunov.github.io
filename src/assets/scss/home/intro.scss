@@ -31,7 +31,7 @@
 
             &:first-child{
                 height: 60vh;
-                padding: 0 20px !important;
+                padding: 0 40px !important;
             }
 
             &:last-child{
@@ -56,6 +56,10 @@
             align-items: center;
             justify-content: center;
 
+            @include breakpoint($mobile-bp) {
+                display: none;   
+            }
+
             .inner{
                 height: 45px;
                 width: 45px;
@@ -75,6 +79,20 @@
             overflow: hidden;
             transform: translateX(-40%);
 
+            @include breakpoint($mobile-bp) {
+                height: 125px;
+                width: 125px;
+                left: auto;
+                right: 50px;
+                transform: none;
+                top: 100px;
+                z-index: 2;
+            }
+
+            @include breakpoint(360px) {
+                top: 50px;
+            }
+
             img{
                 height: 100%;
                 width: 100%;
@@ -93,6 +111,14 @@
             overflow: hidden;
             transform: translateX(-50%);
 
+            @include breakpoint($mobile-bp) {
+                bottom: auto;
+                top: -75px;
+                transform: none;
+                height: 150px;
+                width: 150px;
+            }
+
             img{
                 height: 100%;
                 width: 100%;
@@ -109,6 +135,15 @@
             overflow: hidden;
             border-top-right-radius: 150px;
 
+            @include breakpoint($mobile-bp) {
+                bottom: 0;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 100px;
+                height: 200px;
+                width: 200px;
+                z-index: 2;
+            }
+
             img{
                 height: 100%;
                 width: 100%;
@@ -124,6 +159,15 @@
             bottom: calc(100px + 330px);
             z-index: 2;
 
+            @include breakpoint($mobile-bp) {
+                left: auto;
+                right: 0;
+                top: 0;
+                bottom: auto; 
+                height: 150px;
+                width: 150px;
+            }
+
             .inner{
                 position: absolute;
                 height: 100px;
@@ -133,6 +177,11 @@
                 top: 50%;
                 left: 50%;
                 transform: translateX(-50%) translateY(-50%);
+                
+                @include breakpoint($mobile-bp) {
+                    height: 75px;
+                    width: 75px;
+                }
             }
 
             .right{
@@ -143,6 +192,10 @@
                 border-style: solid;
                 border-width: 0 200px 200px 0;
                 border-color: transparent rgba(255,212,196, 1) transparent transparent;
+
+                @include breakpoint($mobile-bp) {
+                    border-width: 0 150px 150px 0;
+                }
             }
 
             .left{
@@ -151,6 +204,10 @@
                 border-style: solid;
                 border-width: 200px 0 0 200px;
                 border-color: transparent transparent transparent rgba(253,193,86, 1);
+
+                @include breakpoint($mobile-bp) {
+                    border-width: 150px 0 0 150px;
+                }
             }
         }
 
@@ -158,6 +215,10 @@
             position: absolute;
             bottom: -15%;
             right: 330px;
+
+            @include breakpoint($mobile-bp) {
+                display: none;   
+            }
 
             .top{
                 width: 0;
@@ -183,6 +244,16 @@
             bottom: 250px;
             left: 75px;
             transform: rotate(-45deg);
+
+            @include breakpoint($mobile-bp) {
+                left: 25px;
+                bottom: auto;
+                top: 125px;  
+            }
+
+            @include breakpoint(370px) {
+                top: 50px;
+            }
 
             .left{
                 position: absolute;
@@ -225,6 +296,15 @@
             width: 250px;
             z-index: 2;
 
+            @include breakpoint($mobile-bp) {
+                right: auto;
+                left: 0;
+                bottom: 25px;
+                top: auto; 
+                height: 200px;
+                width: 200px;
+            }
+
             .left{
                 position: absolute;
                 left: 0;
@@ -234,6 +314,13 @@
                 background-color: rgba(28,82,138,1);
                 border-top-left-radius: 125px;
                 border-bottom-left-radius: 125px;
+
+                @include breakpoint($mobile-bp) {
+                    height: 200px;
+                    width: 100px;
+                    border-top-left-radius: 100px;
+                    border-bottom-left-radius: 100px;
+                }
             }
 
             .right{
@@ -247,6 +334,10 @@
                     border-style: solid;
                     border-width: 125px 125px 0 0;
                     border-color: rgba(253,193,86, 1) transparent transparent transparent;
+
+                    @include breakpoint($mobile-bp) {
+                        border-width: 100px 100px 0 0;
+                    }
                 }
 
                 .bottom{
@@ -255,6 +346,11 @@
                     height: 125px;
                     width: 125px;
                     background-color: rgba(139,217,217,1);
+
+                    @include breakpoint($mobile-bp) {
+                        height: 100px;
+                        width: 100px;
+                    }
 
                     .inner{
                         position: absolute;

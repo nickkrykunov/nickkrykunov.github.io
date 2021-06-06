@@ -588,12 +588,26 @@ header .header__menu ul li:not(:last-child) {
     margin-right: 40px;
 }
 
+header .header__menu ul li a {
+    color: black;
+}
+
 .home-intro {
     height: 100vh;
     display: -ms-flexbox;
     display: flex;
     padding: 0;
     overflow-y: hidden;
+}
+
+@media (max-width: 640px) {
+    .home-intro {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
 }
 
 .home-intro .home-intro__block:first-child {
@@ -613,6 +627,22 @@ header .header__menu ul li:not(:last-child) {
     width: 40%;
     background-color: #1c0081;
     position: relative;
+}
+
+@media (max-width: 640px) {
+    .home-intro .home-intro__block {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .home-intro .home-intro__block:first-child {
+        height: 60vh;
+        padding: 0 20px !important;
+    }
+
+    .home-intro .home-intro__block:last-child {
+        height: 60vh;
+    }
 }
 
 .home-intro .home-intro__block .home-intro__introduction h1 {
@@ -874,6 +904,13 @@ header .header__menu ul li:not(:last-child) {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     padding: 0 60px;
+}
+
+@media (max-width: 640px) {
+    .home-advantages .home-advantages__list {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
 }
 
 .home-advantages .home-advantages__list .home-advantages__item {
