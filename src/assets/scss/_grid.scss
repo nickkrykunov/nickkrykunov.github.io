@@ -33,7 +33,6 @@ section{
     position: relative;
     display: block;
     padding: 60px 80px;
-    margin-bottom: 30px;
 
     @include breakpoint($desktop-small) {
         padding: 0 60px;

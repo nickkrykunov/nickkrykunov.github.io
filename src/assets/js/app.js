@@ -5,12 +5,16 @@ const header_burger = document.querySelector('.header__burger');
 const header_menu = document.querySelector('.header__menu');
 const pets_sliders = document.querySelectorAll('.adoptions_list');
 
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 header_burger.addEventListener('click', function(event){
     header_burger.classList.toggle('active');
     header_menu.classList.toggle('active');
     body.classList.toggle('no-scroll');
 });
-
 
 pets_sliders.forEach(item => {
     const container = item.querySelector('.slider__container');
@@ -37,3 +41,5 @@ pets_sliders.forEach(item => {
         }
     });
 });
+
+
