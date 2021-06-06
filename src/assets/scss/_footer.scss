@@ -1,0 +1,56 @@
+footer{
+    border-top: 1px solid rgb(212, 212, 212);
+
+    .footer__content{
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint($mobile-bp){
+            flex-direction: column-reverse;
+        }
+
+        .footer__copyright{
+            opacity: .7;
+            font-size: 20px;
+        }
+
+        .footer__contacts{
+            
+            a{
+                display: block;
+                text-decoration: none;
+                color: #000;
+                position: relative;
+                margin-right: 30px;
+                font-size: 18px;
+                line-height: 26px;
+                padding-left: 24px;
+
+                @include breakpoint($mobile-bp){
+                    margin-bottom: 20px;
+                }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 18px;
+                    width: 18px;
+                    left: 0;
+                    top: 0;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                &.email::before{
+                    background-image: url(/assets/images/svg/email.svg);
+                }
+
+                &.phone::before{
+                    background-image: url(/assets/images/svg/telephone.svg);
+                }
+            }
+        }
+    }
+}

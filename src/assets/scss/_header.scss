@@ -7,10 +7,11 @@ header{
     left: 0;
     width: 100%;
     z-index: 10;
+    background-color: rgb(238, 238, 238);
 
     @include breakpoint($table-bp) {
         padding: 5px 15px;
-        background-color: rgb(226, 226, 226);
+        
         justify-content: space-between;
         z-index: 20;
     }
@@ -18,7 +19,6 @@ header{
     .header__logo{
         height: 50px;
         width: 50px;
-        border-radius: 50px;
         background-position: center;
         background-size: cover;
         margin-right: 40px;
@@ -38,7 +38,7 @@ header{
             left: 0;
             transition: .8s top;
             z-index: 19;
-            background-color: rgb(226, 226, 226);
+            background-color: rgb(238, 238, 238);
 
             &.active{
                 top: 0;

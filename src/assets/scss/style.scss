@@ -8,7 +8,7 @@ body {
     font-size: 16px;
     color: $black;
     overflow-y: auto;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(238, 238, 238);
 
     &.no-scroll{
         overflow-y: hidden;
@@ -128,9 +128,13 @@ h6{
 
 
 @import "grid";
-
+@import "sliders";
+@import "pet-card";
 
 @import "header";
-
+@import "footer";
 
 @import "home/_1_";
+
+
+@import "vendors/tiny-slider";
