@@ -139,6 +139,7 @@ section.pet{
 
     .pet-info__story{
         padding: 0 30px;
+        line-height: 200%;
 
         @include breakpoint($mobile-bp){
             padding: 0;

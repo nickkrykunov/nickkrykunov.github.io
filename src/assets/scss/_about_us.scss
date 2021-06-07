@@ -1,0 +1,30 @@
+section.about-us{
+    padding: 100px 150px 50px 150px;
+
+    @include breakpoint($mobile-bp){
+        padding: 80px 20px 30px 20px;
+    }
+
+    .title{
+        text-align: center;
+        
+    }
+
+    img{
+        display: block;
+        // width: 500px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include breakpoint($mobile-bp){
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .content{
+        line-height: 200%;
+    }
+}

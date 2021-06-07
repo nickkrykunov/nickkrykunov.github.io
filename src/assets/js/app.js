@@ -32,9 +32,9 @@ header_menu_links.forEach(link => {
     link.addEventListener('click', event => {
         const link_str = event.currentTarget.getAttribute('href');
         const hash = link_str.substring(link_str.indexOf('#'),link_str.length);
-        header_burger.classList.toggle('active');
-        header_menu.classList.toggle('active');
-        body.classList.toggle('no-scroll');
+        header_burger.classList.remove('active');
+        header_menu.classList.remove('active');
+        body.classList.remove('no-scroll');
         scroll_to_section(hash);
     })
 })

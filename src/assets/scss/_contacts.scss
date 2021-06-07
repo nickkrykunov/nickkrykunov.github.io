@@ -1,0 +1,125 @@
+section.contacts{
+    @include breakpoint($mobile-bp){
+        padding-top: 50px;
+    }
+
+    .title{
+        padding-top: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+
+        @include breakpoint($mobile-bp){
+            margin-bottom: 0;
+        }
+    }
+
+    .contacts-list{
+        padding: 30px 0;
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            @include breakpoint($mobile-bp){
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+
+            li{
+                font-size: x-large;
+                
+                @include breakpoint($mobile-bp){
+                    margin-bottom: 40px;
+                }
+
+                a{
+                    color: black;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+.contact-us-form{
+    width: 100%;
+
+    .title{
+        text-align: center;
+        font-weight: bolder;
+        margin-bottom: 30px;
+
+        @include breakpoint($mobile-bp) {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    }
+
+    form{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        padding: 20px 10px;
+
+        @include breakpoint($mobile-bp) {
+            flex-direction: column;
+        }
+
+        .error{
+            display: none;
+            color: red;
+        }
+
+        input{
+            width: 300px;
+            padding: 10px 20px;
+            margin-right: 20px;
+
+            @include breakpoint($mobile-bp) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        small{
+            font-size: small;
+        }
+
+        button{
+            padding: 10px 50px;
+            background-color: #7057cc;
+            border: 1px solid #7057cc;
+            color: #fff;
+            transition: .3s color, .3s background-color;
+
+            @include breakpoint($mobile-bp) {
+                width: 100%;
+            }
+
+            &:hover{
+                background-color: transparent;
+                color: #7057cc;
+            }
+        }
+
+        .form-data{
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+
+            @include breakpoint($mobile-bp) {
+                width: 100%;
+            }
+
+            &.error{
+                .error{
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
